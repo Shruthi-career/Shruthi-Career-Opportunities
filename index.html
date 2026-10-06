@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shruthi Career Opportunities — explore insurance advisor opportunities or enquire about an insurance policy suited to your needs.">
+<title>Shruthi Career Opportunities</title>
+<style>
+:root{--navy:#102747;--blue:#2457c5;--gold:#f4bd50;--bg:#f4f7fc;--ink:#182335;--muted:#607086;--green:#13834a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55}
+header{background:linear-gradient(135deg,#102747,#2457c5);color:white;padding:38px 18px 58px;text-align:center}
+.brand{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#ffe3a0;font-weight:700}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.12;margin:14px auto;max-width:850px}
+header p{max-width:700px;margin:0 auto;color:#eef4ff;font-size:17px}
+.wrap{max-width:1050px;margin:-28px auto 40px;padding:0 16px}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:#fff;border-radius:18px;padding:25px;box-shadow:0 10px 32px #10274712;margin-bottom:18px}
+.option{display:flex;flex-direction:column;min-height:260px;border:1px solid #e1e8f3}
+.iconbox{height:52px;width:52px;border-radius:14px;background:#edf3ff;display:grid;place-items:center;font-size:27px;margin-bottom:12px}
+h2{margin:0 0 10px;color:var(--navy)}h3{margin:0 0 8px;color:var(--navy)}
+p{margin-top:8px}.muted{color:var(--muted);font-size:14px}
+.btn{border:0;border-radius:10px;background:var(--blue);color:#fff;font-size:16px;font-weight:700;padding:13px 18px;text-decoration:none;display:inline-block;text-align:center;cursor:pointer}
+.btn.green{background:var(--green)}.btn.gold{background:#f4bd50;color:#17243a}.option .btn{margin-top:auto}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}.full{grid-column:1/-1}
+label{font-size:14px;font-weight:700;color:#29384d}
+input,select,textarea{font:inherit;width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:9px;background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid #93c5fd;border-color:var(--blue)}
+.hidden{display:none}.notice{background:#fff8e6;border-left:4px solid var(--gold);padding:12px 14px;border-radius:8px;font-size:13px;color:#4d4534}
+footer{text-align:center;color:var(--muted);padding:12px 18px 34px;font-size:13px}
+@media(max-width:680px){.options{grid-template-columns:1fr}form{grid-template-columns:1fr}.full{grid-column:auto}.card{padding:20px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Shruthi Career Opportunities</div>
+  <h1>Your Next Step in Insurance Starts Here</h1>
+  <p>Interested in building a career as an insurance advisor, or looking for an insurance policy that fits your needs? Choose the option that suits you.</p>
+</header>
+<main class="wrap">
+  <section class="options" aria-label="Choose an option">
+    <article class="card option">
+      <div class="iconbox" aria-hidden="true">🤝</div>
+      <h2>Option 1: Work as an Agent</h2>
+      <p>Express your interest in becoming an insurance advisor. Share your contact details and our team will explain the role, eligibility, training and next steps.</p>
+      <p class="muted">For job seekers, working professionals, business owners, homemakers and others interested in this opportunity.</p>
+      <button class="btn" type="button" onclick="showForm('agent')">Apply to Work as an Agent</button>
+    </article>
+    <article class="card option">
+      <div class="iconbox" aria-hidden="true">🛡️</div>
+      <h2>Option 2: Find a Suitable Policy</h2>
+      <p>Tell us what type of cover you are exploring. We can contact you to discuss your needs and available options.</p>
+      <p class="muted">You can enquire about life, health, motor or other insurance. Suitability and final terms depend on the insurer and policy documents.</p>
+      <button class="btn green" type="button" onclick="showForm('policy')">Enquire About a Policy</button>
+    </article>
+  </section>
+
+  <section class="card hidden" id="agentSection">
+    <h2>Agent Application / Enquiry</h2>
+    <p class="muted">Fill in your details. WhatsApp will open with a prepared message for you to review and send.</p>
+    <form id="agentForm">
+      <div class="field"><label for="aName">Full name *</label><input id="aName" required maxlength="100" autocomplete="name" placeholder="Your full name"></div>
+      <div class="field"><label for="aPhone">Mobile number *</label><input id="aPhone" required inputmode="tel" pattern="[0-9+ ()-]{10,18}" maxlength="18" autocomplete="tel" placeholder="Your mobile number"></div>
+      <div class="field"><label for="aDistrict">District / City *</label><input id="aDistrict" required maxlength="100" placeholder="District or city"></div>
+      <div class="field"><label for="aOccupation">Current occupation *</label><select id="aOccupation" required><option value="">Select</option><option>Employed</option><option>Business owner</option><option>Homemaker</option><option>Job seeker</option><option>Student</option><option>Retired employee</option><option>Marketing / Sales</option><option>Other</option></select></div>
+      <div class="field"><label for="aLanguage">Preferred language</label><select id="aLanguage"><option>Telugu</option><option>English</option><option>Hindi</option><option>Other</option></select></div>
+      <div class="field"><label for="aTime">Best time to contact</label><select id="aTime"><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+      <div class="field full"><label for="aMessage">Message (optional)</label><textarea id="aMessage" rows="3" maxlength="500" placeholder="Any questions"></textarea></div>
+      <div class="field full"><label><input type="checkbox" id="aConsent" required style="width:auto;margin-right:8px">I consent to sharing these details for follow-up about the agent opportunity. *</label></div>
+      <div class="field full"><button class="btn" type="submit">Send Agent Enquiry on WhatsApp</button></div>
+    </form>
+  </section>
+
+  <section class="card hidden" id="policySection">
+    <h2>Insurance Policy Enquiry</h2>
+    <p class="muted">Share only the information needed for an initial enquiry. Do not enter confidential identity or financial information here.</p>
+    <form id="policyForm">
+      <div class="field"><label for="pName">Full name *</label><input id="pName" required maxlength="100" autocomplete="name" placeholder="Your full name"></div>
+      <div class="field"><label for="pPhone">Mobile number *</label><input id="pPhone" required inputmode="tel" pattern="[0-9+ ()-]{10,18}" maxlength="18" autocomplete="tel" placeholder="Your mobile number"></div>
+      <div class="field"><label for="pDistrict">District / City *</label><input id="pDistrict" required maxlength="100" placeholder="District or city"></div>
+      <div class="field"><label for="pType">Type of insurance *</label><select id="pType" required><option value="">Select policy type</option><option>Life insurance</option><option>Health insurance</option><option>Motor insurance</option><option>Personal accident</option><option>Travel insurance</option><option>Other / Not sure</option></select></div>
+      <div class="field"><label for="pCover">Who needs cover?</label><select id="pCover"><option>Myself</option><option>Family</option><option>Parents</option><option>Vehicle</option><option>Business</option><option>Other</option></select></div>
+      <div class="field"><label for="pBudget">Approximate budget (optional)</label><select id="pBudget"><option>Prefer to discuss</option><option>Under ₹5,000 per year</option><option>₹5,000–₹15,000 per year</option><option>₹15,000–₹30,000 per year</option><option>Above ₹30,000 per year</option></select></div>
+      <div class="field full"><label for="pMessage">What would you like help with? (optional)</label><textarea id="pMessage" rows="3" maxlength="500" placeholder="Briefly describe what you are looking for"></textarea></div>
+      <div class="field full"><label><input type="checkbox" id="pConsent" required style="width:auto;margin-right:8px">I consent to sharing these details for follow-up about my insurance enquiry. *</label></div>
+      <div class="field full"><button class="btn green" type="submit">Send Policy Enquiry on WhatsApp</button></div>
+    </form>
+  </section>
+
+  <section class="card">
+    <h3>About this website</h3>
+    <p class="muted">Shruthi Career Opportunities helps visitors express interest in insurance advisor opportunities or request an initial policy discussion. Submitting an enquiry does not guarantee appointment, policy approval or insurance coverage. All products, eligibility, premiums, benefits and exclusions are subject to the relevant insurer's terms and applicable regulations.</p>
+    <div class="notice">Privacy: This static website does not store form entries in a database. When you submit a form, WhatsApp opens with a draft message and you must press Send. Do not submit OTPs, passwords, Aadhaar numbers, bank details or medical records through this page.</div>
+  </section>
+</main>
+<footer>© <span id="year"></span> Shruthi Career Opportunities</footer>
+<script>
+const WHATSAPP_NUMBER = '919177100667';
+document.getElementById('year').textContent = new Date().getFullYear();
+function showForm(type){
+  document.getElementById('agentSection').classList.toggle('hidden',type!=='agent');
+  document.getElementById('policySection').classList.toggle('hidden',type!=='policy');
+  document.getElementById(type==='agent'?'agentSection':'policySection').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function sendWhatsApp(lines){
+  const url='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(lines.join('\n'));
+  window.open(url,'_blank','noopener,noreferrer');
+}
+document.getElementById('agentForm').addEventListener('submit',function(e){
+ e.preventDefault(); const v=id=>document.getElementById(id).value.trim();
+ sendWhatsApp(['AGENT APPLICATION - Shruthi Career Opportunities','','Name: '+v('aName'),'Mobile: '+v('aPhone'),'District/City: '+v('aDistrict'),'Occupation: '+v('aOccupation'),'Preferred language: '+v('aLanguage'),'Best time: '+v('aTime'),'Message: '+(v('aMessage')||'Not provided'),'Consent: Given']);
+});
+document.getElementById('policyForm').addEventListener('submit',function(e){
+ e.preventDefault(); const v=id=>document.getElementById(id).value.trim();
+ sendWhatsApp(['INSURANCE POLICY ENQUIRY - Shruthi Career Opportunities','','Name: '+v('pName'),'Mobile: '+v('pPhone'),'District/City: '+v('pDistrict'),'Insurance type: '+v('pType'),'Cover for: '+v('pCover'),'Approximate budget: '+v('pBudget'),'Needs/message: '+(v('pMessage')||'Not provided'),'Consent: Given']);
+});
+</script>
+</body>
+</html>
